@@ -16,8 +16,8 @@
  "dependencies": {
   "@c11/engine.patterns": "^4.0.0-alpha.90",
   "postcss": "^8.4.5",
-  "react": "^17.0.1",
-  "react-dom": "^17.0.1",
+  "react": "^16.0.2",
+  "react-dom": "^16.0.2",
   "tailwindcss": "^3.0.17",
   "todomvc-app-css": "^2.4.1"
  }

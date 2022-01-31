@@ -15,7 +15,7 @@ const app = engine({
     todosById: {
       todo1: { id: 'todo1', title: 'Add initial state to engine', status: "pending", mode: "viewing" },
       todo2: { id: 'todo2', title: 'Use initial state in components', status: "done", mode: "viewing" },
-      todo3: { id: 'todo3', title: 'Update state in components', status: "done", mode: "editing" }
+      todo3: { id: 'todo3', title: 'Update state in components', status: "pending", mode: "editing" }
     },
     visibleTodoIds: ['todo1', 'todo2']
   },

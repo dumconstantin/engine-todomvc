@@ -5,25 +5,25 @@ const addNewTodo: producer = ({
     getTitle = get.newTodo.title,
     updateTodosById = update.todosById,
     updateNewTodoTitle = update.newTodo.title,
-    updateNewTodoIntent= update.newTodo.intent
+    updateNewTodoIntent = update.newTodo.intent
 }) => {
     if (newTodoIntent !== NewTodoIntents.commit) {
         return;
     }
     updateNewTodoIntent.remove();
-
+    const title = getTitle.value().trim();
+    if (!title) return;
     const id = String(new Date().getTime());
     const newTodo: TodoItem = {
         id,
-        title: getTitle.value(),
+        title,
         status: TodoStatuses.pending,
         mode: TodoModes.viewing,
     };
-    console.log("new id", newTodo)
 
     updateTodosById.merge({
         [id]: newTodo,
-    }); // this does not work
+    });
 
     updateNewTodoTitle.set(null);
 
@@ -32,11 +32,12 @@ const addNewTodo: producer = ({
 const cancelAddingTodo: producer = ({
     newTodoIntent = observe.newTodo.intent,
     updateNewTodoTitle = update.newTodo.title,
+    updateNewTodoIntent = update.newTodo.intent
 }) => {
     if (newTodoIntent !== NewTodoIntents.discard) {
         return;
     }
-
+    updateNewTodoIntent.remove();
     updateNewTodoTitle.set(null);
 };
 
