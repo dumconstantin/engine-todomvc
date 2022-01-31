@@ -1,0 +1,24 @@
+{
+ "name": "my-app",
+ "private": true,
+ "version": "1.0.0",
+ "scripts": {
+  "start": "engine-service-web start",
+  "test": "engine-service-web test",
+  "build": "engine-service-web build",
+  "dashboard": "engine-dashboard start"
+ },
+ "engineOutput": true,
+ "devDependencies": {
+  "@c11/engine.dashboard": "^4.0.0-alpha.96",
+  "@c11/engine.service-web": "^4.0.0-alpha.96"
+ },
+ "dependencies": {
+  "@c11/engine.patterns": "^4.0.0-alpha.90",
+  "postcss": "^8.4.5",
+  "react": "^17.0.1",
+  "react-dom": "^17.0.1",
+  "tailwindcss": "^3.0.17",
+  "todomvc-app-css": "^2.4.1"
+ }
+}
