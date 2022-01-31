@@ -8,14 +8,8 @@ const Editing: view = ({
         <input
             className="edit"
             defaultValue={title}
-            onChange={(e) =>
-                updateTodo.merge({ title: e.currentTarget.value })
-            }
-            onBlur={() => {
-                console.log("BLURRED")
-                updateTodo.merge({ mode: TodoModes.viewing })
-            }
-            }
+            onChange={(e) => updateTodo.merge({ title: e.currentTarget.value })}
+            onBlur={() => updateTodo.merge({ mode: TodoModes.viewing })}
         />
     </li>
 

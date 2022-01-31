@@ -3,7 +3,7 @@ import { TodoStatuses, TodoModes } from "../../types";
 const Viewing: view = ({
   title = observe.todosById[prop.id].title,
   status = observe.todosById[prop.id].status,
-  updateTodo = update.todosById[prop.id].mode
+  updateTodo = update.todosById[prop.id]
 
 }) => (
   <li className={status === 'done' ? "completed" : ""}>
@@ -19,11 +19,8 @@ const Viewing: view = ({
                 ? TodoStatuses.pending
                 : TodoStatuses.done
           })}
-         />
-      <label
-        onDoubleClick={() => updateTodo.set(TodoModes.editing)}
-
-      >{title}</label>
+      />
+      <label onDoubleClick={() => updateTodo.merge({ mode: TodoModes.editing })}>{title}</label>
       <button className="destroy" />
     </div>
   </li>

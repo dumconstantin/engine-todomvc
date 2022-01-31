@@ -79,10 +79,8 @@ export const App: view = ({
         <section className="main">
           <input id="toggle-all" className="toggle-all" type="checkbox"
             checked={pendingCount === 0}
-            onChange={() => {
-              console.log("TOGGLE");
+            onChange={() =>
               updateToggleAllRequest.set(new Date().getTime())
-            }
             }
           />
           <label htmlFor="toggle-all">Mark all as complete</label>
