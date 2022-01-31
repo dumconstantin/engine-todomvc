@@ -2,22 +2,13 @@ import { TodoStatuses, TodoModes, TodosById, TodoItem } from "../../types";
 
 const removeTodo: producer = ({
   todoToRemove = observe.todoToRemove,
-  getTodosById = get.todosById,
-  updateTodosById = update.todosById,
+  updateRemoveTodo = update.todosById[arg.todoToRemove],
   updateTodoToRemove = update.todoToRemove
 }) => {
   if (!todoToRemove) {
     return;
   }
-  const currentTodos: TodosById = getTodosById.value()
-  const newTodos: TodosById = Object.values(currentTodos as TodosById)
-    .filter((todo: TodoItem) => todo.id !== todoToRemove)
-    .reduce((accum, todo) => {
-      accum[todo.id] = todo;
-      return accum;
-    }, {} as TodosById)
-
-  updateTodosById.set(newTodos);
+  updateRemoveTodo.remove();
   updateTodoToRemove.set(null);
 };
 

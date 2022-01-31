@@ -15,6 +15,9 @@ const Fallback = ({ id }: { id: string }) => {
 };
 
 const Todo: view = ({ id, mode = observe.todosById[prop.id].mode }) => {
+    if (!mode) {
+        return null;
+    }
     const Component = uiStates[mode as TodoModes] || Fallback;
     return <Component id={id} />;
 };
