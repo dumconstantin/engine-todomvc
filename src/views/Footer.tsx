@@ -1,5 +1,5 @@
 
-import { TodoStatuses, TodosById, TodoFilters } from "../types";
+import { TodoStatuses, TodosById, TodoFilters, TodoItem } from "../types";
 
 
 const Footer: view = ({
@@ -68,8 +68,8 @@ const handleClearRequest: producer = ({
     }
 
     const todosById = getTodosById.value();
-    const nextTodos = Object.values(todosById)
-        .filter((todo: any) => todo.status !== TodoStatuses.done)
+    const nextTodos = Object.values(todosById as TodosById)
+        .filter((todo: TodoItem) => todo.status !== TodoStatuses.done)
         .reduce((accum: any, todo: any) => {
             accum[todo.id] = todo;
 

@@ -13,4 +13,5 @@ export type State = {
   pendingCount: number;
   clearRequest: number | null;
   toggleAllRequest: number | null;
+  todoToRemove: string | null;
 };

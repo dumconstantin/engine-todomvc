@@ -26,7 +26,6 @@ const addNewTodo: producer = ({
     });
 
     updateNewTodoTitle.set(null);
-
 };
 
 const cancelAddingTodo: producer = ({
