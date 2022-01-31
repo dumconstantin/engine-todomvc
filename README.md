@@ -1,4 +1,6 @@
-# Code 11 Standards - Front-End Stub Project · ![](https://img.shields.io/badge/Node-12.4-blue) ![](https://img.shields.io/badge/TypeScript-3.9-blue)
+# Code 11 Todo app engine tutorial app
+
+This is the repository with all the code found [here](https://code11.github.io/engine/docs/tutorials/react/setup).
 
 ### Quickstart
 
@@ -7,22 +9,6 @@ yarn install
 yarn start
 ```
 
-A development server located at http://localhost:8081 will welcome you.
-While working locally, hot module replacement is enabled
+Todo app will run at http://localhost:8080.
 
-### Production building
-
-```
-yarn build
-
-# In case you want to serve the build result
-yarn serve
-```
-
-When serving the production build, the application will be available at http://localhost:5000
-
-### Authoring standalone apps
-
-### Authoring single-spa
-
-### Authoring modules
+Engine [dashboard](https://code11.atlassian.net/wiki/spaces/COG/pages/3132981264/Code11+Engine+Dashboard) will run at http://localhost:8081.
