@@ -1,5 +1,5 @@
 {
- "name": "my-app",
+ "name": "engine-todo-app",
  "private": true,
  "version": "1.0.0",
  "scripts": {
