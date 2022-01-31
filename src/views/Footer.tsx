@@ -72,7 +72,6 @@ const handleClearRequest: producer = ({
         .filter((todo: TodoItem) => todo.status !== TodoStatuses.done)
         .reduce((accum: any, todo: any) => {
             accum[todo.id] = todo;
-
             return accum;
         }, {});
 
