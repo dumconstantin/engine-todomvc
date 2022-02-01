@@ -5,7 +5,6 @@ import Footer from "./Footer";
 import { TodoStatuses, TodoFilters, TodoItem, TodosById } from "../types";
 
 import "todomvc-app-css/index.css";
-import Editing from "./Todo/Editing";
 
 
 // PRODUCERS
