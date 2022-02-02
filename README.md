@@ -1,6 +1,6 @@
 # Code 11 Todo app engine tutorial app
 
-This is the repository with all the code found [here](https://code11.github.io/engine/docs/tutorials/react/setup).
+This is the repository with all the code for [this](https://code11.github.io/engine/docs/tutorials/react/setup) tutorial.
 
 ### Quickstart
 
